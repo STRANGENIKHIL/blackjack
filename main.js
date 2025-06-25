@@ -60,8 +60,6 @@
 
         function shuffle()
         {
-            // for 1000 turns
-            // switch the values of two random cards
             for (var i = 0; i < 1000; i++)
             {
                 var location1 = Math.floor((Math.random() * deck.length));
@@ -77,7 +75,7 @@
         {
             document.getElementById('btnStart').value = 'Restart';
             document.getElementById("status").style.display="none";
-            // deal 2 cards to every player object
+
             currentPlayer = 0;
             createDeck();
             shuffle();
@@ -89,8 +87,7 @@
 
         function dealHands()
         {
-            // alternate handing cards to each player
-            // 2 cards each
+
             for(var i = 0; i < 2; i++)
             {
                 for (var x = 0; x < players.length; x++)
@@ -129,7 +126,6 @@
             return el;
         }
 
-        // returns the number of points that a player has in hand
         function getPoints(player)
         {
             var points = 0;
@@ -152,8 +148,7 @@
 
         function hitMe()
         {
-            // pop a card from the deck to the current player
-            // check if current player new points are over 21
+
             var card = deck.pop();
             players[currentPlayer].Hand.push(card);
             renderCard(card, currentPlayer);
@@ -164,7 +159,7 @@
 
         function stay()
         {
-            // move on to next player, if any
+
             if (currentPlayer != players.length-1) {
                 document.getElementById('player_' + currentPlayer).classList.remove('active');
                 currentPlayer += 1;

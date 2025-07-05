@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blackjack - Player vs Computer</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="theme-toggle" id="themeToggle">🌓</div>
+  <div class="container">
+    <header>
+      <h1>Blackjack</h1>
+      <div class="balance">
+        <div class="coin"></div>
+        <span id="balanceAmount">1000</span>
+      </div>
+    </header>
+
+    <div class="deck-container">
+      <div class="deck" id="deck">🃏</div>
+      <div class="card-count" id="cardCount">52 cards</div>
+    </div>
+
+    <div class="game-area">
+      <section class="dealer-area">
+        <div class="title">
+          <h2>Dealer</h2>
+          <div class="score" id="dealerScore">Score: 0</div>
+        </div>
+        <div class="hand" id="dealerHand"></div>
+      </section>
+
+      <section class="player-area">
+        <div class="title">
+          <h2>Player</h2>
+          <div class="score" id="playerScore">Score: 0</div>
+        </div>
+        <div class="hand" id="playerHand"></div>
+        <div class="result-message" id="resultMessage"></div>
+        <div class="actions">
+          <button class="hit-btn" id="hitBtn">Hit</button>
+          <button class="stand-btn" id="standBtn">Stand</button>
+          <button class="restart-btn" id="restartBtn">New Game</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <p>Blackjack - Player vs Computer Dealer</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
